@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Dancing+Script:wght@400;500&family=Great+Vibes&family=Lily+Script+One&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        place-items: center;
+    }
+
+    #hours {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnkRxmCvEeoDEA8RJ07_r0Yrb1ct0fn1yJIw&usqp=CAU);
+        border-bottom: 4px double red;
+        border-top: 4px double red;
+        color: white;
+        margin: 2px;
+        font-size: xx-large;
+        border-radius: 8px;
+        font-family: 'Lily Script One', cursive;
+        padding: 3px;
+    }
+
+    #minutes {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnkRxmCvEeoDEA8RJ07_r0Yrb1ct0fn1yJIw&usqp=CAU);
+        border-bottom: 4px double red;
+        border-top: 4px double red;
+        color: white;
+        margin: 2px;
+        font-size: xx-large;
+        border-radius: 8px;
+        padding: 3px;
+        font-family: 'Lily Script One', cursive;
+    }
+
+    #seconds {
+        border-bottom: 4px double red;
+        border-top: 4px double red;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnkRxmCvEeoDEA8RJ07_r0Yrb1ct0fn1yJIw&usqp=CAU);
+        color: white;
+        margin: 2px;
+        font-size: xx-large;
+        border-radius: 8px;
+        padding: 3px;
+        animation-nam◘e: animate;
+        font-family: 'Lily Script One', cursive;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes animate {
+        from {
+            font-size: xx-large;
+            /* color: red; */
+            /* z-index: 1; */
+        }
+
+        to {
+            color: transparent;
+            font-size: xx-large;
+            /* z-index: 0; */
+        }
+    }
+
+    #AM {
+        color: black;
+    }
+
+    #day {
+        /* color: white; */
+        font-size: x-large;
+        font-family: 'Bungee Inline', cursive;
+
+    }
+
+    #month {
+        font-size: small;
+        font-family: 'Lily Script One', cursive;
+    }
+
+    #year {
+        font-family: 'Bungee Inline', cursive;
+    }
+
+    #main1 {
+        text-shadow: 2px 2px 5px purple;
+        padding: 10px;
+        width: 50vw;
+        /* border-left: 4px dotted white; */
+        /* border-right: 4px dotted white; */
+        color: black;
+        background-image: url(data:image/jpeg;base64,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);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        /* grid-template-columns: 50px 50px 50px 10px; */
+        /* grid-template-rows: 30px 90px; */
+        justify-content: center;
+    }
+
+    #main2 {
+        padding: 10px;
+        text-shadow: 2px 2px 5px red;
+        /* float: right; */
+    }
+    span{
+        height: 8vh;
+    }
+</style>
+
+<body>
+    <div id="main1">
+        <span id="hours"> </span>
+        <span id="minutes"></span>
+        <span id="seconds"></span>
+        <span id="AM"></span>
+<br>
+
+        <div id="main2">
+            <span id="day"></span>&nbsp;
+            <span id="month"></span>&nbsp;
+            <span id="year"></span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        var months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOMBER", "NOVEMBER", "DECEMBER"]
+        setInterval(() => {
+            const date1 = new Date()
+            const hours = date1.getHours()
+            const minutes = date1.getMinutes()
+            const seconds = date1.getSeconds()
+            const day = date1.getDate()
+            const month = date1.getMonth()
+            const year = date1.getFullYear()
+
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            document.getElementById("day").innerHTML = day;
+            document.getElementById("month").innerHTML = months[month]
+            document.getElementById("year").innerHTML = year
+
+            if (hours > 12) {
+                document.getElementById("AM").innerHTML = "AM"
+                document.getElementById("hours").innerHTML = hours - 12
+            } else {
+                document.getElementById("AM").innerHTML = "PM"
+                document.getElementById("hours").innerHTML = hours
+            }
+
+            if (seconds >= 10) {
+                document.getElementById("seconds").innerHTML = seconds
+            } else {
+                document.getElementById("seconds").innerHTML = "0" + seconds
+            }
+
+            if (minutes >= 10) {
+                document.getElementById("minutes").innerHTML = minutes
+            } else {
+                document.getElementById("minutes").innerHTML = "0" + minutes
+            }
+        }, 1000);
+
+
+
+
+    </script>
+</body>
+
+</html>
